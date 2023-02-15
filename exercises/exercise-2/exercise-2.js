@@ -70,3 +70,36 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+
+
+// const results = hogwarts
+//                   .filter(({house}) => house === "Gryffindor")
+//                   .map(({firstName, lastName}) => `${firstName} ${lastName}`);
+
+// // console.log(results);
+
+// const teacher = hogwarts.filter(({occupation}) => occupation === "Teacher")
+
+function taskOne(array){
+   array.forEach(item => {
+    const {firstName,lastName,house,pet,occupation} = item;
+   
+    if(house === "Gryffindor"){
+      console.log(`${firstName} ${lastName} is living in ${house}.`) 
+    }
+  }
+   )}
+
+
+function taskTwo(array){
+          array.forEach(item => {
+        const {firstName,lastName,house,pet,occupation} = item;
+          if(occupation === "Teacher" && pet)
+          console.log(`${firstName} ${lastName} has a ${pet}.`) 
+        }
+          )}
+
+       taskOne(hogwarts);
+       taskTwo(hogwarts)
+
